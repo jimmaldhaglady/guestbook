@@ -1,0 +1,30 @@
+
+{% block body %}
+<h2 class=""page-header">GuestBook</h2>
+<table class=""table table-striped">
+    <thead>
+    <tr>
+    </tr>
+<tr>
+    <th>#</th>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Email</th>
+    <th>Message</th>
+</tr>
+   </thead>
+    <tbody>
+   <tr><td></br></td></tr>
+    {%  for guestbook in guestbook %}
+   <tr>
+       <th scope=""row">{{ guestbook.id}}</th>
+    <th scope=""row">{{ guestbook.name}}</th>
+    <th scope=""row">{{ guestbook.address}}</th>
+    <th scope=""row">{{ guestbook.email}}</th>
+    <th scope=""row">{{ guestbook.message}}</th>
+</tr>
+    {% endfor %}
+</tbody>
+    </table>
+{% endblock %}
+
